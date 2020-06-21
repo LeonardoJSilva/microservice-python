@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: products
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: products
+  template:
+    metadata:
+      labels:
+        app: products
+    spec:
+      containers:
+        - name: products
+          image: leonardojsilva/products:2.0
+          env:
+            - name: "MONGO_HOST"
+              value: "mongo-mongodb"
+            - name: "MONGO_PORT"
+              value: "27017"
+            - name: "MONGO_USERNAME"
+              value: "user"
+            - name: "MONGO_PASSWORD"
+              value: "pass"
+            - name: "MONGO_DATABASE"
+              value: "products"
+            - name: "MONGO_ARGUMENTS"
+              value: ""

@@ -1,3 +1,5 @@
+import logging
+
 from pymongo import IndexModel, ASCENDING
 from umongo import Instance, Document, fields
 from database.database import db
@@ -20,7 +22,9 @@ class ProductDB(Document):
         indexes = [IndexModel([("code", ASCENDING), ("supplier", ASCENDING)], unique=True)]
 
 
-ProductDB.ensure_indexes()
-
-
-
+try:
+    ProductDB.ensure_indexes()
+    logging.info("Connected successfully in database")
+except Exception:
+    logging.error("Fail to connect in database")
+    raise
