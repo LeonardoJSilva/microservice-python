@@ -7,4 +7,4 @@ if __name__ == "__main__":  # pragma: no cover
     app = web.Application()
     create_routes(routes)
     app.add_routes(routes)
-    web.run_app(app)
+    web.run_app(app, port=80)
