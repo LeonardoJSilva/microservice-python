@@ -1,6 +1,6 @@
 version: "3"
 services:
-  mongo:
+  mongodb:
     image: mongo:3.6.0
     container_name: mongo
     tmpfs: /data/db
@@ -9,3 +9,5 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=pass
     ports:
       - "27017:27017"
+    volumes:
+      - "mongodata:/data/db"
