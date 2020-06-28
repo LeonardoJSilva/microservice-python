@@ -14,7 +14,6 @@ class ProductDB(Document):
     description = fields.StringField(required=True)
     quantity = fields.IntegerField(required=True)
     supplier = fields.IntegerField(required=True)
-    deleted = fields.BooleanField(required=True, default=False)
 
     class Meta:
         collection_name = "products"

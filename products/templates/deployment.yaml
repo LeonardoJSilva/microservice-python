@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
         - name: products
+          image: leonardojsilva/products:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
-          image: leonardojsilva/products:5.0
           env:
             - name: "MONGO_HOST"
               value: "mongodb"

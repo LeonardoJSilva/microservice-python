@@ -26,7 +26,6 @@ try:
             f"mongodb://{MONGO_HOST}:{MONGO_PORT}/{MONGO_ARGS}",
         )
     db = client[MONGO_DB]
-    db.authenticate("user", "pass")
 
 except Exception:
     logging.error("Fail to connect in Database")

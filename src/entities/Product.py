@@ -6,4 +6,3 @@ class Product:
         self.description = description
         self.quantity = quantity
         self.supplier = supplier
-        self.deleted = deleted
