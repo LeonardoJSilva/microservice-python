@@ -1,5 +1,4 @@
 import logging
-
 from aiohttp import web
 from presentation.router import create_routes
 
