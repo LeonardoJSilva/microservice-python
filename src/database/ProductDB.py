@@ -1,5 +1,4 @@
 import logging
-
 from pymongo import IndexModel, ASCENDING
 from umongo import Instance, Document, fields
 from database.database import db
