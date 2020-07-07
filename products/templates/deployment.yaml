@@ -15,7 +15,6 @@ spec:
       containers:
         - name: products
           image: leonardojsilva/products:latest
-          imagePullPolicy: Always
           ports:
             - containerPort: 80
           env:
@@ -31,3 +30,7 @@ spec:
               value: "products"
             - name: "MONGO_ARGUMENTS"
               value: ""
+            - name: "SUPPLIERS_PORT"
+              value: "50051"
+            - name: "SUPPLIERS_HOST"
+              value: "suppliers"
